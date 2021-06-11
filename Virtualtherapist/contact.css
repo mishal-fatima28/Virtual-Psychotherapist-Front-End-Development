@@ -1,0 +1,574 @@
+*{
+
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'mollen';
+
+
+}
+
+@font-face {
+
+	font-family: 'mollen';
+	src:url(fonts/mollen.otf);
+	font-style: normal;
+}
+
+@font-face {
+
+	font-family: 'mollenbold';
+	src:url(fonts/mollenbold.otf);
+	font-style: normal;
+}
+
+/* Nav Area Starts */
+
+
+header {
+	position: relative;
+	max-width: 100%;
+	margin-top: 20px;
+	margin-left: 40px;
+	margin-right: 40px;
+	padding: 0px 10px;
+	background: #fcfffd;
+	box-sizing: border-box;
+	border-radius: 10px;
+	
+}
+
+.logo {
+	
+
+	padding: 10px 20px;
+	text-align: center;
+	box-sizing: border-box;
+	float: left;
+
+}
+nav {
+	float: right;
+
+
+}
+
+.clearfix{
+	clear: both;
+}
+
+
+nav ul {
+	margin:10px;
+	padding: 2px;
+	display: flex;
+
+}
+
+nav ul li{
+
+	list-style: none;
+	text-decoration: none;
+}
+
+
+nav ul li a{
+
+	display: block;
+	margin-left: 10px 0;
+	padding: 7px 15px;
+	color: #3c3c3c;
+	font-size: 18px;
+	border-radius: 6px;
+}
+
+nav ul li a.active,
+nav ul li a:hover
+ {
+
+	color:white;
+	background:#d52346;
+	transition: 0.3s;
+
+
+}
+
+
+
+@media (max-width: 768px){
+
+	.menu-toggle {
+
+		display: block;
+		width: 33px;
+		height: 33px;
+		margin: 10px;
+		background:#d52346;
+		float: right;
+		cursor: pointer;
+		text-align: center;
+		font-size: 25px;
+		color: white;
+		border-radius: 30%;
+	}
+
+	.menu-toggle:before {
+
+		content: '\f0c9';
+		line-height: 30px;
+		font-family: fontAwesome;
+	}
+	.menu-toggle.active:before {
+
+		content: '\f00d';
+		font-family: fontAwesome;
+		
+	}
+
+	.logo img {
+	
+	padding: 0px 0px;
+	text-align: center;
+	box-sizing: border-box;
+	float: left;
+	text-align: left;
+	width: 260px;
+	
+	
+
+	}
+
+	header {
+
+		margin: 0px auto;
+		padding: 0px 0px;
+
+	}
+
+
+	header nav {
+
+		display: none;
+		
+	}
+
+	header nav.active {
+
+		transition: 10s;
+		display: block;
+		width: 100%
+
+	}
+	header nav.active ul {
+
+
+		display: block;
+	}
+
+	header nav.active ul li a {
+
+		margin: 0px;
+	}
+
+}
+
+/* CONTACT AREA STARTS HERE*/
+
+ 
+
+
+
+body {
+
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	
+}
+
+.container {
+
+	width: 1000px;
+	padding: 20px;
+}
+
+.con .container h2 {
+
+	width: 100%;
+	color: #d52346;
+	font-size: 36px;
+	text-align: left;
+	margin-bottom: 10px;
+	margin-left: 14px; 
+	font-family: 'mollenbold';
+}
+
+.container .row100{
+
+	position: relative;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(autofit, minmax(300px,1fr));
+}
+
+.container .row100 .col{
+
+	position: relative;
+	width: 100%;
+	padding: 0 10px;
+	margin: 30px 0 10px;
+	transition: 0.5s;
+}
+
+.container .row100 .inputbox{
+
+	position: relative;
+	width: 100%;
+	height: 40px;
+	color: #d52346;
+
+}
+
+.container .row100 .inputbox input,
+.container .row100 .inputbox.textarea textarea{
+
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background:transparent;
+	box-shadow: none;
+	border: none;
+	outline: none;
+	font-size: 18px;
+	padding: 0 10px;
+	z-index: 1;
+	color: white;
+}
+
+.container .row100 .inputbox .text {
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	line-height: 40px;
+	font-size: 18px;
+	padding: 0 10px;
+	display: block;
+	transition: 0.5s;
+	pointer-events: none;
+}
+
+.container .row100 .inputbox input:focus + .text,
+.container .row100 .inputbox input:valid + .text{
+
+	top: -35px;
+	left: -10px;
+}
+
+.container .row100 .inputbox .line{
+
+	position: absolute;
+	bottom: 0;
+	display: block;
+	width: 100%;
+	height: 2px;
+	background:#d52346;
+	transition: 0.5s;
+	border-radius: 2px;
+	pointer-events: none;
+}
+
+.container .row100 .textarea .line{
+
+	position: absolute;
+	bottom: 0;
+	display: block;
+	width: 70%;
+	height: 2px;
+	background:#d52346;
+	transition: 0.5s;
+	border-radius: 2px;
+	pointer-events: none;
+}
+
+.container .row100 .inputbox input:focus ~ .line,
+.container .row100 .inputbox input:valid ~ .line{
+
+	height: 100%;
+}
+
+.container .row100 .inputbox.textarea{
+
+	position: relative;
+	width: 100%;
+	height: 100px;
+	padding: 10px 0;
+	margin-left: 14px; 
+}
+
+.container .row100 .inputbox.textarea textarea{
+
+	height: 100%;
+	resize: none;
+}
+
+.container .row100 .inputbox textarea:focus + .text,
+.container .row100 .inputbox textarea:valid + .text{
+
+	top: -35px;
+	left: -10px;
+}
+
+.container .row100 .inputbox textarea:focus ~ .line,
+.container .row100 .inputbox textarea:valid ~ .line{
+
+	height: 100%;
+}
+
+
+input.btn {
+
+	display: inline-block;
+	text-transform: uppercase;
+	border:none;
+	outline:none;
+	color: white;
+	margin: 1rem 0;
+	padding: 5px 5px;
+	width: 200px;
+	height: 45px;
+	background-color: #d52346;
+	background-size: 200%;
+	border-radius: 4px;
+	box-shadow: inset 0 0 0 0 #3c3c3c;
+	cursor: pointer;
+	transition: ease-out 0.3s;
+	
+	font-size: 1.2rem;
+}
+
+input.btn:hover {
+
+	color: white;
+	box-shadow: inset 200px 0 0 0 #3c3c3c;
+}
+
+@media only screen and (max-width: 650px){
+
+	.container .row100 .textarea .line{
+
+	
+	width: 93%;
+	
+}
+}
+
+
+/* FOOTER AREA STARTS HERE*/
+
+.footer-top p {
+
+	color: white;
+	line-height: 25px;
+	margin-top: 20px;
+}
+
+.footer-top h3,h2 {
+
+	color: white;
+}
+
+.footer-top  h2 {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.footer-top {
+
+	background: #3c3c3c;
+	padding: 80px 0;
+}
+
+.segment-one h3 {
+
+	color: white; 
+
+}
+
+.segment-two h2 {
+
+	color: white;
+	text-transform: uppercase;
+	padding-left: 70px;
+
+
+}
+
+
+
+.segment-two ul {
+	margin: 0;
+	padding-left: 70px;
+	list-style-type:none;
+	text-decoration: none;
+
+}
+
+.segment-two ul li:before {
+	content: "\2022";
+	color: white;
+	display: inline-block;
+	width: 1em;
+	
+}
+
+.segment-two ul li {
+
+	
+	line-height: 40px;
+}
+
+.segment-two ul li a {
+
+	color: white;
+	text-decoration: none;
+
+}
+
+.segment-three h2 {
+
+	color: white;
+	text-transform: uppercase;
+	padding-left: 15px;
+
+}
+
+
+
+.segment-three ul {
+	margin: 0;
+	padding-left: 17px;
+	list-style: none;
+	
+}
+
+.segment-three ul li:before {
+	content: "\2022";
+	color: white;
+	display: inline-block;
+	
+	width: 1em;
+	
+}
+
+.segment-three ul li {
+
+	line-height: 40px;
+}
+
+.segment-three ul li a {
+
+	color: white;
+	text-decoration: none;
+
+}
+
+.segment-four h2 {
+
+	color: white;
+	text-transform: uppercase;
+}
+
+
+
+.segment-four a {
+	background:white;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	border-radius: 50%;
+
+}
+
+.segment-four a:hover {
+
+	background-color: #d52346;
+	transition: 0.3s;
+}
+
+.segment-four a i {
+
+	font-size: 20px;
+	color: black;
+	padding: 10px 12px;
+}
+
+.segment-four a i:hover {
+
+	color: white;
+}
+
+.footer-bottom-text {
+
+	text-align: center;
+	background-color: #262424;
+	line-height: 75px;
+
+
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-height: 991px ){
+
+	.md-mb-30 {
+		margin-bottom: 30px;
+	}
+}
+@media only screen and (max-width: 767px){
+	.sm-mb-30{
+		margin-bottom: 30px;
+	}
+
+	.footer-top{
+		padding: 50px 0;
+	}
+
+	.segment-one {
+		margin-left: 20px;
+
+		
+	}
+
+
+	.segment-two h2 {
+
+		padding-left: 18px;
+	}
+
+	.segment-two ul {
+		padding-left: 18px;
+	}
+
+	.segment-three h2 {
+
+		padding-left: 18px;
+	}
+
+	.segment-four h2  {
+
+		padding-left: 20px;
+	}
+
+	.segment-four p {
+
+		padding-left: 20px;
+
+	}
+
+	.segment-four .f-icons {
+
+		padding-left: 20px;
+
+	}
+}
